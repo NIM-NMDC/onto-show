@@ -1,0 +1,41 @@
+# Ontology Parse API - HTTP 测试文件
+
+### 根路径
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+### 健康检查
+GET http://127.0.0.1:8000/health
+Accept: application/json
+
+### 获取所有本体术语
+GET http://127.0.0.1:8000/api/v1/ontology/terms
+Accept: application/json
+
+### 根据ID获取特定术语
+GET http://127.0.0.1:8000/api/v1/ontology/terms/MS:0000001
+Accept: application/json
+
+### 搜索本体术语
+GET http://127.0.0.1:8000/api/v1/ontology/terms/search?q=mass
+Accept: application/json
+
+### 获取本体统计信息
+GET http://127.0.0.1:8000/api/v1/ontology/stats
+Accept: application/json
+
+### 导出本体数据为JSON文件
+POST http://127.0.0.1:8000/api/v1/ontology/export
+Accept: application/json
+
+### API 文档
+GET http://127.0.0.1:8000/docs
+Accept: text/html
+
+### ReDoc 文档
+GET http://127.0.0.1:8000/redoc
+Accept: text/html
+
+### OpenAPI Schema
+GET http://127.0.0.1:8000/openapi.json
+Accept: application/json
